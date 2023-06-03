@@ -1,0 +1,57 @@
+
+<div class="Clases">
+    <button><span>
+        Patologia
+    </span></button>
+    <button><span>
+        Microbiologia
+    </span></button>
+
+    <button><span>
+        Semiologia 2
+    </span></button>
+
+    <button><span>
+        Farmacologia
+    </span></button>
+
+    <button><span>
+        Salud Publica 3
+    </span></button>
+
+    <button><span>
+        Investigacion
+    </span></button>
+</div>
+
+<table mat-table [dataSource]="dataSource" style="border-radius: 20px; overflow-x: scroll; max-width: 100%;">
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Tarea">
+      <th style="text-align: center;" mat-header-cell *matHeaderCellDef> Tarea </th>
+      <td style="text-align: center;" mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Fecha">
+      <th style="text-align: center;" mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td style="text-align: center;" mat-cell *matCellDef="let element"> Nombre </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Nota">
+      <th style="text-align: center;" mat-header-cell *matHeaderCellDef> Nota </th>
+      <td style="text-align: center;" mat-cell *matCellDef="let element"> Prueba </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Editar">
+      <th style="width: 150px !important; text-align: center;" mat-header-cell *matHeaderCellDef> Editar </th>
+      <td style="text-align: center;"  mat-cell *matCellDef="let element">  Prueba </td>
+    </ng-container>
+
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
