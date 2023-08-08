@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
     constructor(private http:HttpClient, public jwtHelper: JwtHelperService, private router:Router) { }
-    apiurl='http://localhost:3000'
+    apiurl='http://3.91.56.180:5000'
 
 
     isLoggedIn(): boolean {
